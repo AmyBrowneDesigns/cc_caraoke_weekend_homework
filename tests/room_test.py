@@ -16,18 +16,30 @@ class RoomTest(unittest.TestCase):
         self.assertEqual("podA",self.room.room_name)
 
     def add_song_to_song(self):
-        song1 = Song ("coldplay")
-        song2 = Song ("fleetwood_mac")
+        song1 = Song ("coldplay", "fix_you")
+        song2 = Song ("fleetwood_mac", "dreams")
         song3 = Song ("cream", "sunshine_of_your_love")
         self.room.add_song(song3)
         self.room.add_song(song1)
         self.room.add_song(song2)
         self.assertEqual(3, len(self.room.song))
+    
 
     def test_check_song_list(self):
         self.assertEqual(0, len(self.room.song))
 
-    # def test_add_guest_to_room(self):
+    def add_room_name(self):
+        room1 = room_name("podA")
+        room2 = room_name("podB")
+        room3 = room_name("podC")
+        self.room_add_room_name(room1)
+        self.room_add_room_name(room2)
+        self.room_add_room_name(room3)
+        self.assertEqual(3, len(self.room))
+
+
+    def test_add_guest_to_room(self):
+        pass
     #     guest1 = Guest("sam", 100,00)
     #     guest2 = Guest("pat", 50.00)
     #     guest3 = Guest("dan", 20.00)
