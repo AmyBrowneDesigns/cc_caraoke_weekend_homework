@@ -27,11 +27,11 @@ class RoomTest(unittest.TestCase):
     def test_check_song_list(self):
         self.assertEqual(0, len(self.room.song))
 
-    def test_add_guest_to_room(self):
-        guest1 = Guest("sam", 100,00)
-        guest2 = Guest("pat", 50.00)
-        guest3 = Guest("dan", 20.00)
-        self.room.add_guest(guest1)
-        self.room.add_guest(guest2)
-        self.room.add_guest(guest3)
-        self.assertEqual(3, )
+    # def test_add_guest_to_room(self):
+    #     guest1 = Guest("sam", 100,00)
+    #     guest2 = Guest("pat", 50.00)
+    #     guest3 = Guest("dan", 20.00)
+    #     self.room.add_guest(guest1)
+    #     self.room.add_guest(guest2)
+    #     self.room.add_guest(guest3)
+    #     self.assertEqual(3, self.guest)

@@ -7,8 +7,8 @@ from src.guest import Guest
 class SongTest(unittest.TestCase):
 
     def setUp(self):
-        self.song= song("oasis", "wonderwall")
+        self.song= Song("oasis", "wonderwall")
 
 
-    # def tests_song_has_artist(self):
-    #     self.assertEqual("oasis", self.song.artist)
+    def test_song_has_artist(self):
+        self.assertEqual("oasis", self.song.artist)
