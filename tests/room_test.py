@@ -53,9 +53,15 @@ class RoomTest(unittest.TestCase):
 
     def check_in_guest(self):
         self.guest.check_in_guest(self.guest)
-        self.assertEqual('Amy', self.guest.guest
-        self.assertEqual(1,len(guest))
-        #added this and append on room.py it stayed at 7 tests as if this doesn nothing...
+        self.assertEqual('Amy', self.guest.guest)
+        self.assertEqual(1,len(self.room.room))
+        #added this and append on room.py it stayed at 7 tests as if this does nothing...
+
+    def check_out_guest(self):
+        self.guest.check_out_guest(self.guest)
+        self.assertEqual("Amy", self.guest.guest)
+        self.assertEqual(0, len(self.room.room))
+        #added and no change, still 7 tests run, 0 error/fail.
 
     def remove_guest_from_room(self):
         self.assertEqual()
