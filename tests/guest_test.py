@@ -9,8 +9,10 @@ class GuestTest(unittest.TestCase):
 
     def setUp(self):
         self.guest = Guest("Amy", 100.00)
-        self.song = Song("oasis", "wonderwall")
 
 
     def test_guest_name(self):
         self.assertEqual("Amy", self.guest.name)
+
+    def test_guest_has_money(self):
+        self.assertEqual(100.00, self.guest.wallet)
