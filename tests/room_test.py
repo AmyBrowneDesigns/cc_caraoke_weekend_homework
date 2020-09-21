@@ -15,7 +15,7 @@ class RoomTest(unittest.TestCase):
         self.assertEqual(0, len(self.room.song))
 
     def test_room_has_name(self):
-        self.assertEqual("podA",self.room.room_name)
+        self.assertEqual("podA",self.room.room)
 
     def test_till_total(self):
         self.assertEqual(100.00, self.room.till)
@@ -33,28 +33,28 @@ class RoomTest(unittest.TestCase):
         self.assertEqual(0, len(self.room.song))
 
     def test_add_room_name(self):
-        room1 = Room("podA")
-        room2 = Room("podB")
-        room3 = Room("podC")
-        self.room_add_room_name(room1)
-        self.room_add_room_name(room2)
-        self.room_add_room_name(room3)
-        self.assertEqual(3, len(self.room))
+        room1 = Room("podA", 100.00)
+        room2 = Room("podB", 100.00)
+        room3 = Room("podC", 100.00)
+        self.room.add_room_name(room1)
+        self.room.add_room_name(room2)
+        self.room.add_room_name(room3)
+        self.assertEqual(3, len(self.room.room))
 
 
     # def test_add_guest_to_room(self):
     #     self.guest1 = Guest("sam", 100,00)
-    #     # guest2 = Guest("pat", 50.00)
-    #     # guest3 = Guest("dan", 20.00)
+    #     guest2 = Guest("pat", 50.00)
+    #     guest3 = Guest("dan", 20.00)
     #     self.room.add_guest(self.guest1)
-    #     # self.room.add_guest(guest2)
-    #     # self.room.add_guest(guest3)
+    #     self.room.add_guest(guest2)
+    #     self.room.add_guest(guest3)
     #     self.assertEqual(1, self.room.guest)
 
-    def test_check_in_guest(self):
-        self.guest.check_in_guest(self.guest)
-        self.assertEqual('Amy', self.guest.guest)
-        self.assertEqual(1,len(self.room.room))
+    # def test_check_in_guest(self):
+    #     self.guest.check_in_guest(self.guest)
+    #     self.assertEqual('Amy', self.guest.guest)
+    #     self.assertEqual(1,len(self.room.room))
     #     #added this and append on room.py it stayed at 7 tests as if this does nothing...
 
     # def check_out_guest(self):
